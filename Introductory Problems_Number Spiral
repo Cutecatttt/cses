@@ -1,0 +1,48 @@
+//Number Spiral
+#include <stdio.h>
+#define A 1000
+int main() {
+    int t;
+    scanf("%d", &t);
+    int arr[A][A], x[t], y[t];
+    arr[0][0] = 1;
+    int count = 2;
+    int i = 0;
+    int j = 0;
+    for(int k = 1; k < A; k++){
+        if(k%2==1){
+            j++;
+            arr[i][j] = count;
+            count++;
+            for(int m = 1; m <= k; m++){
+                i++;
+                arr[i][j] = count;
+                count++;
+            }
+            for(int m = 1; m <= k; m++){
+                j--;
+                arr[i][j] = count;
+                count++;
+            }
+        }
+        else{
+            i++;
+            arr[i][j] = count;
+            count++;
+            for(int m = 1; m <= k; m++){
+                j++;
+                arr[i][j] = count;
+                count++;
+            }
+            for(int m = 1; m <= k; m++){
+                i--;
+                arr[i][j] = count;
+                count++;
+            }
+        }
+    }
+    for(int m = 0; m < t; m++)
+        scanf("%d%d", &x[m], &y[m]);
+    for(int m = 0; m < t; m++)
+        printf("%d ", arr[x[m]-1][y[m]-1]);
+}
