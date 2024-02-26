@@ -1,6 +1,7 @@
 //Increasing Array
 #include <stdio.h>
 #include <string.h>
+
 int main() {
     int N, arr[200000];
     scanf("%d", &N);
