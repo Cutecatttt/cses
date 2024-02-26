@@ -8,6 +8,7 @@ void inkq(){
         printf("%d", X[i]);
     printf("\n");
 }
+
 void Try(int i){
     //Duyet cac kkha nang cua X[i]
     for(int j = 0; j <=1 ; j++){
@@ -16,6 +17,7 @@ void Try(int i){
         else Try(i + 1);
     }
 }
+
 int main() {
     scanf("%d", &N);
     Try(1);
