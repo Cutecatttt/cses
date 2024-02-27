@@ -1,7 +1,7 @@
 // Online C compiler to run C program online
 #include <stdio.h>
 
-int use[50],so_ngo_cut, ngocut[4], DK[50], count;
+int use[50],so_ngo_cut, ngocut[5], DK[50], count;
 char X[50], Y[50];
 int k = 1;
 
@@ -16,7 +16,7 @@ void checkkq(){
     int check = 0;
     for(int i =1; i<=48; i++)
         if(DK[i] !=0 )
-            if(X[i] != Y[i+1]) check++;
+            if(X[i] != Y[i-1]) check++;
     if (check == 0) count++;
 }
 
@@ -27,8 +27,11 @@ void Try(int i){
             //xem lieu co the di chuyen den day khong
             if(use[k+j] == 0){
                 //dat lai ngo cut
-                for(int m = 1; m <= so_ngo_cut; m++)
-                    ngocut[m] = 0;
+                if(so_ngo_cut != 0){
+                    for(int m = 1; m <= so_ngo_cut; m++)
+                        ngocut[m] = 0;
+                    so_ngo_cut = 0;
+                }
                 X[i] = huong(j);
                 k += j;
                 use[k] = 1;
