@@ -23,7 +23,7 @@ void checkkq(){
 void Try(int i){
     // duyet cac kha nang co the di chuyen
     for(int j = -7; j <= 7; j++){
-        if((j==-7 || (j==-1 && k%7!=1) || (j==1 && k%7!=0) || j==7) && (k+j >=1) && (k+j<=48) && (k+j!=ngocut[1]) && (k+j!=ngocut[2]) && (k+j!=ngocut[3]) && (k+j!=ngocut[4])){
+        if((j==-7 || (j==-1 && k%7!=1) || (j==1 && k%7!=0) || j==7) && (k+j >=1) && (k+j<=49) && (k+j!=ngocut[1]) && (k+j!=ngocut[2]) && (k+j!=ngocut[3]) && (k+j!=ngocut[4])){
             //xem lieu co the di chuyen den day khong
             if(use[k+j] == 0){
                 //dat lai ngo cut
