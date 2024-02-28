@@ -42,12 +42,12 @@ void Try(int i){
                 use[k] = 0;
             }
         }
-        //roi vao ngo cut
-        if(i < 48){
-            so_ngo_cut++;
-            ngocut[so_ngo_cut] = k;
-            Try(i-1);
-        }
+    }
+    //roi vao ngo cut
+    if(i < 48){
+        so_ngo_cut++;
+        ngocut[so_ngo_cut] = k;
+        Try(i-1);
     }
 }
 
