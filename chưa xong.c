@@ -1,4 +1,4 @@
-// Online C compiler to run C program online
+
 #include <stdio.h>
 
 int use[50],so_ngo_cut, ngocut[5], DK[50], count;
