@@ -8,12 +8,12 @@ int X[N], Y[N];
 int KQ(int X[],int Y[], int x){
     int count = 0;
     int z = 0;
-    int i = 1;
+    int i = 0;
     while(1){
-        if(X[i] < Y[i+z]){
+        if(X[i] <= Y[i+z]){
             count ++;
             i++;
-            if(i == x) break;
+            if(i+z == x) break;
         }
         else z++;
     }
