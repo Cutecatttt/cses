@@ -1,5 +1,6 @@
 //Missing Number
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 long long sum, N, arr[2000000] ;
 
 int main() {
