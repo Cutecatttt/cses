@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int cot[100], d1[100], d2[100], X[100], res[100][100], Y;
