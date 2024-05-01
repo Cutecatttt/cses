@@ -1,11 +1,12 @@
-//Tower of Hanoi
-#include<stdio.h>
+#include <bits/stdc++.h>
 
+using namespace std;
+ 
 void chuyendia(int N, char a, char b, char tg)
 {
     if(N == 1)
     {
-        printf("%c %c\n", a, b); 
+        cout << a << " " << b << endl;
     }
     else
     {
@@ -17,6 +18,7 @@ void chuyendia(int N, char a, char b, char tg)
 int main()
 {
     int N;
-    scanf("%d", &N);
+    cin >> N;
+    cout << pow(2,N) -1 << endl;
     chuyendia(N, '1', '3', '2');
 }
