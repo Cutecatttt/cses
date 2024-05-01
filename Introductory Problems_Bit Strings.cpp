@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
+
 using namespace std;
-
+ 
 #define MOD 1000000007
-
+ 
 int main() {
     int n, answer = 1;
     cin >> n;
