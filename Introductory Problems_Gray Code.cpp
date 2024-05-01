@@ -1,12 +1,13 @@
-//Gray Code
-#include <stdio.h>
+#include <bits/stdc++.h>
 
+using namespace std;
+ 
 int N, X[100];
 
 void inkq(){
     for(int i = 1; i <= N; i++)
-        printf("%d", X[i]);
-    printf("\n");
+        cout << X[i];
+    cout << endl;
 }
 
 void Try(int i){
@@ -19,8 +20,7 @@ void Try(int i){
 }
 
 int main() {
-    scanf("%d", &N);
+    cin >> N;
     Try(1);
-
     return 0;
 }
