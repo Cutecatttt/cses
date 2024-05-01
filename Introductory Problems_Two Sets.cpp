@@ -1,31 +1,31 @@
-//Two Sets
-#include <stdio.h>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 int main() {
-    int N;
-    scanf("%d", &N);
+    int N; cin >> N;
     if(N%4 == 1 || N%4 == 2) printf("NO");
     else{
         printf("YES\n");
         if(N%2==0){
-            printf("%d\n", N/2);
+            cout << N/2;
             for(int i = 1; i <= N; i++)
                 if(i%4 == 2 || i%4 == 3)
-                    printf("%d ", i);
+                    cout << i;
             printf("\n%d\n", N/2);
             for(int i = 1; i <= N; i++)
                 if(i%4 == 0 || i%4 == 1)
-                    printf("%d ", i);
+                    cout << i;
         }
         else{
             printf("%d\n", N/2 + 1);
             for(int i = 1; i <= N; i++)
                 if(i%4 == 1 || i%4 == 2)
-                    printf("%d ", i);
+                    cout << i;
             printf("\n%d\n", N/2);
             for(int i = 1; i <= N; i++)
                 if(i%4 == 0 || i%4 == 3)
-                    printf("%d ", i);
+                    cout << i;
         }
     }
 }
