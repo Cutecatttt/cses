@@ -1,9 +1,10 @@
-//Weird Algorithm
-#include <stdio.h>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 int main() {
     long long N;
-    scanf("%lld", &N);
+    cin >> N;
     printf("%lld ", N);
     while(N!=1){
         if(N%2 == 0){
@@ -11,6 +12,6 @@ int main() {
         }
         else
             N = N*3 +1;
-        printf("%lld ", N);
+        cout << N;
     }
 }
