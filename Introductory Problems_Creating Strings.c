@@ -1,22 +1,18 @@
-#include <stdio.h>
-#include <string.h>
+#include <bits/stdc++.h>
 
-int N, count, dem;
-char X[10], Y[10], use[10], KQ[50000][10];
+using namespace std;
 
-void luukq(){
-    for(int i = 1; i <= N; i++){
-        KQ[count][i] = Y[i];
-    }
-}
+int N, use[10];
+string X, Y;
+set<string> KQ;
+
 void Try(int i){
     for(int j = 0; j < N; j++){
-        if(use[j] == 0){
+        if(!use[j]){
             use[j] = 1;
             Y[i] = X[j];
-            if(i == N){
-                luukq();
-                count++;
+            if(i == N-1){
+                KQ.insert(Y);
             }
             else Try(i+1);
             use[j] = 0;
@@ -24,36 +20,12 @@ void Try(int i){
     }
 }
 
-void inkq(){
-    for(int i = 1; i <= N; i++)
-        printf("%c", KQ[0][i]);
-    printf("\n");
-    for(int i = 1; i < count; i++){
-        int check_1 = 0;
-        for(int j = 0; j < i; j++){
-            int check_2 = 0;
-            for(int k = 1; k <= N; k++)
-                if(KQ[i][k]!=KQ[j][k])
-                    check_2++;
-            //printf("check_2=%d ", check_2);
-            if(check_2 != 0) check_1++;
-            }
-        //printf("check_1=%d ", check_1);
-        if (check_1 == i){
-            for(int k = 1; k <= N; k++)
-                printf("%c", KQ[i][k]);
-            printf("\n");
-            dem++;
-        }
-    }
-}
-
-
 int main() {
-    scanf("%s", &X);
-    N = strlen(X);
-    Try(1);
-    inkq();
-    printf("%d", dem+1);
+    cin >> X;
+    Y = X;
+    N = X.size();
+    Try(0);
+    cout << KQ.size() << endl;
+    for(string x : KQ) cout << x << endl;
     return 0;
 }
