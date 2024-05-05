@@ -1,26 +1,19 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 
 using namespace std;
- 
-int N, X[100];
 
-void inkq(){
-    for(int i = 1; i <= N; i++)
-        cout << X[i];
-    cout << endl;
-}
+string s;
 
-void Try(int i){
-    //Duyet cac kkha nang cua X[i]
-    for(int j = 0; j <=1 ; j++){
-        X[i] = j;
-        if(i == N) inkq();
-        else Try(i + 1);
+int main(){
+    int n; cin >> n;
+    s.insert(0, n, '0');
+    for(int i = 1; i <= pow(2,n); i ++){
+        cout << s << endl;
+        for(int j = 1; j<=n; j++){
+            if((i+(int)pow(2,j-1))%(int)pow(2,j) == 0){
+                if(s[n-j] == '0') s[n-j] = '1';
+                else s[n-j] = '0';
+            }
+        }
     }
-}
-
-int main() {
-    cin >> N;
-    Try(1);
-    return 0;
 }
